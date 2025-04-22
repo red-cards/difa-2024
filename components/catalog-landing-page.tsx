@@ -13,9 +13,11 @@ export default function CatalogLandingPage() {
                     <h1>Meja</h1>
                 </div>
             </div>
-            <div className="w-[48rem] h-[72rem] flex flex-row gap-5">
-                <div className="bg-gray-100 rounded-md w-80">Item 1</div>
-                <div className="bg-gray-100 rounded-md w-80">Item 1</div>
+            <div className="w-[48rem] grid grid-cols-3 gap-4">
+                <div className="bg-gray-100 rounded-md h-96">Item 1</div>
+                <div className="bg-gray-100 rounded-md h-96">Item 1</div>
+                <div className="bg-gray-100 rounded-md h-96">Item 1</div>
+                <div className="bg-gray-100 rounded-md h-96">Item 1</div>
             </div>
         </div>
     )
