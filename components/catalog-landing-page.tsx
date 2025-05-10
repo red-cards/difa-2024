@@ -1,5 +1,8 @@
 import {Open_Sans} from "next/font/google";
 const openSans = Open_Sans({ subsets: ["latin"] });
+import sofaL from "@/assets/images/Sofa L.png";
+import Image from "next/image";
+import CatalogChild from "./catalog-child";
 
 export default function CatalogLandingPage() {
     return (
@@ -14,10 +17,14 @@ export default function CatalogLandingPage() {
                 </div>
             </div>
             <div className="w-[48rem] grid grid-cols-3 gap-4">
-                <div className="bg-gray-100 rounded-md h-96">Item 1</div>
-                <div className="bg-gray-100 rounded-md h-96">Item 1</div>
-                <div className="bg-gray-100 rounded-md h-96">Item 1</div>
-                <div className="bg-gray-100 rounded-md h-96">Item 1</div>
+                <CatalogChild image={sofaL} title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"} amount={"999.999.999"}                
+                />
+                <CatalogChild image={sofaL} title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"} amount={"999.999.999"}                
+                />
+                <CatalogChild image={sofaL} title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"} amount={"999.999.999"}                
+                />
+                <CatalogChild image={sofaL} title={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"} amount={"999.999.999"}                
+                />
             </div>
         </div>
     )
