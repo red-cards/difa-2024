@@ -4,18 +4,31 @@ import Image from "next/image";
 interface Props{
     image : StaticImageData,
     title : string,
-    desc : string
+    amount : string
 }
-export default function FreatureChild(props:Props) {
+
+export default function CatalogChild(props: Props){
     return (
-        <div className="flex flex-row gap-4 w-96 p-4 items-start rounded-md bg-white">
-            <div className="self-center">
-                <Image src={props.image.src} height={props.image.height*3} width={props.image.width*3} alt="Gratis Kirim"></Image>   
+        <div className="bg-gray-100 rounded-md h-96 flex flex-col border border-gray-100 overflow-hidden">
+            <div className="flex h-3/4 bg-gray-50">
+                <Image 
+                    src={props.image.src} 
+                    alt={props.image.blurDataURL ?? 'undefined'}
+                    layout="responsive"
+                    width={1}
+                    height={1}
+                    objectFit="cover"
+                    className="w-full h-3/4 m-auto"
+                />
             </div>
-            <div className="flex flex-col gap-2 justify-between">
-                <h1 className="text-xl font-bold text-gray-800">{props.title}</h1>
-                <p className="text-gray-500">{props.desc}</p>
-            </div>             
+            <div className="h-1/4 bg-white text-gray-900">
+                <div className=" px-4 pt-4 pb-2 truncate ">
+                {props.title}
+                </div>
+                <div className="px-4 truncate bg-white text-gray-900">
+                Rp.{props.amount} 
+                </div>
+            </div>
         </div>
     )
 }
